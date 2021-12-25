@@ -12,10 +12,9 @@ const util = require('util')
 console.log("Please wait gathering system information.....");
 
 si.getAllData((cb)=>{
-
-    mac=cb.net.filter(e=>e.iface=='Ethernet')[0].mac;
-  
-
+ 
+    mac=cb.net.filter(e=>e.iface.substring(0,2)=='Et' || e.iface.substring(0,2)=='en')[0].mac;
+   
     let obj={
       "itinfraitemuniqno": mac,
       "itinfraitemserialno": cb.system.serial,
@@ -24,7 +23,7 @@ si.getAllData((cb)=>{
       "itinfraitemdetailedspec": cb,
      
     }
-   
+   console.log(obj);
     request.post('https://apis.aditya.ac.in/itinfra/ItInfraItemDetails', {
   json: obj
 }, (error, res, body) => {
