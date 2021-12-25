@@ -23,7 +23,7 @@ si.getAllData((cb)=>{
       "itinfraitemdetailedspec": cb,
      
     }
-   console.log(obj);
+   
     request.post('https://apis.aditya.ac.in/itinfra/ItInfraItemDetails', {
   json: obj
 }, (error, res, body) => {
