@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.88.0",
-    "systeminformation": "^5.9.17"
+    "request": "^2.88.2",
+    "systeminformation": "^5.10.5"
   }
 }
