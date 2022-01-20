@@ -12,6 +12,11 @@ https://www.npmjs.com/package/pkg
 pkg -t node12-linux,node14-linux,node14-win index.js
 
 
+Generate 32Bit Windows App 
+npm install -g pkg@4.3.4
+pkg . --targets win-x86 --output ./dist/win32.exe
+
+
 
 
 
