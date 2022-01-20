@@ -13,8 +13,9 @@ pkg -t node12-linux,node14-linux,node14-win index.js
 
 
 Generate 32Bit Windows App 
-npm install -g pkg@4.3.4
-pkg . --targets win-x86 --output ./dist/win32.exe
+
+npm install -g pkg@4.3.8
+pkg index.js --target win-x86 -o win.exe
 
 
 
